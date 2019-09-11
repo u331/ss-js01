@@ -20,13 +20,13 @@ function game(begin = 0, end = 0) {
         if(input === "q"){
             console.log("Finish the game.");
             rl.close();
-            return -1;
+            process.exit();
         } else {
             guessed = Number(input);
             if(guessed === randNumber){
-                console.log("Congratulations! You are win!");
+                console.log("Congratulations! You are winner!");
                 rl.close();
-                return 0;
+                process.exit();
             } else {
                 console.log("Try again!");
             }
